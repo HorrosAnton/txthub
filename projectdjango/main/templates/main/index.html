@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Txthub{% endblock %}
+
+{% block header %}<h1>txthub.ru</h1>{% endblock %}
+
+{% block content %}
+<main>
+    <form method="post" target="_blank">
+        {% csrf_token %}
+        {{ form.title }}
+        <script>
+            function autoResize(elem) {
+                elem.style.height = 'auto';
+                elem.style.height = (elem.scrollHeight-4) + 'px';
+            }
+        </script>
+<!--        <textarea name="" id="" class="autoresize" oninput="autoResize(this)" rows="1" maxlength="1000" autofocus placeholder="Начни писать..."></textarea>-->
+        <button type="submit" >Опубликовать</button>
+        <span>{{ error }}</span>
+    </form>
+</main>
+<footer><a href="{% url 'about' %}">Зачем это?</a></footer>
+{% endblock %}
