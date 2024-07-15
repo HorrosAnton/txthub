@@ -1,3 +1,0 @@
-git add doc/foo.txt
-
-мвы
