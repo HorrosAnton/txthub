@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Txthub{% endblock %}
+
+{% block header %}<h1>txthub.ru</h1>{% endblock %}
+
+{% block content %}
+
+<main>
+        {{ art.title }}
+</main>
+<footer><a href="{% url 'home' %}">Вернуться на главную</a></footer>
+{% endblock %}
